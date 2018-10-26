@@ -8,7 +8,7 @@ def basicImage():
         
         tagName = "ctp" + str(id)
         print(tagName)
-        dockerFileText = compilers.compilers["1"]
+        dockerFileText = compilers.compilers[str(id)]
         dockerFile = open('dfile/Dockerfile', 'w', encoding = 'utf-8')     # Getting the content of Required Dockerfile
         dockerFile.write(dockerFileText)
         dockerFile.close()
