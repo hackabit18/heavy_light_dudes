@@ -39,6 +39,11 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
         versn = str(self.versionCombo.currentText())
         if lang == 'C++':
             compileSource.compileSrcCpp(versn, self.codeTB.toPlainText())
+            self.logTB.clear()
+            srcPath = os.getcwd() + '/tmp'
+            file = open(srcPath + '/out.txt','r', encoding = 'utf-8')
+            logs = file.read()
+            self.logTB.insertPlainText(logs)
 
 
 
