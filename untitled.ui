@@ -26,7 +26,7 @@
      <widget class="QComboBox" name="languageCombo">
       <item>
        <property name="text">
-        <string>C/C++</string>
+        <string>C++</string>
        </property>
       </item>
       <item>
@@ -111,7 +111,7 @@
      <x>0</x>
      <y>0</y>
      <width>651</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
