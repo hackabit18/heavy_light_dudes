@@ -9,7 +9,7 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def __init__(self, parent=None):
         super(CTP, self).__init__(parent)
         self.setupUi(self)
-        self.items = {'C++':['std98','std03','std11','std14','std17']} # Mapping for listing versions
+        self.items = {'C++':['98','03','11','14','17']} # Mapping for listing versions
         self.openB.clicked.connect(self.browse_folder)  # When the button is pressed
                                                         # Execute browse_folder function
         self.listWidget.itemActivated.connect(self.selectFile) #browse and select file
@@ -26,11 +26,12 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
                 self.listWidget.addItem(file_name)  # add file to the listWidget
     
     def selectFile(self, listItem):
-    	self.codeTB.clear()
-    	srcPath = self.directory + '/' + listItem.text()
-    	srcFile = open(srcPath, 'r', encoding = 'utf-8')
-    	self.srcCode = srcFile.read()
-    	self.codeTB.insertPlainText(srcCode)
+        self.codeTB.clear()
+        srcPath = self.directory + '/' + listItem.text()
+        srcFile = open(srcPath, 'r', encoding = 'utf-8')
+        srcCode = srcFile.read()
+        srcFile.close()
+        self.codeTB.insertPlainText(srcCode)
     
     def onComboActivated(self, text):
         self.versionCombo.clear()
@@ -42,10 +43,15 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
         if lang == 'C++':
             compileSource.compileSrcCpp(versn, self.codeTB.toPlainText())
             self.logTB.clear()
-            srcPath = os.getcwd() + '/tmp'
-            file = open(srcPath + '/out.txt','r', encoding = 'utf-8')
+            srcPath = os.getcwd() + '/tmp/out.txt'
+            file = open(srcPath ,'r', encoding = 'utf-8')
             logs = file.read()
-            self.logTB.insertPlainText(logs)
+            print(logs)
+            file.close()
+            if logs == "" :
+                self.logTB.insertPlainText("Compiled Successfully")
+            else:
+                self.logTB.insertPlainText(logs)
 
 
 

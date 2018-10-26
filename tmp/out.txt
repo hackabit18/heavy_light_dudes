@@ -1,0 +1,7 @@
+in.cpp: In function 'int main()':
+in.cpp:6:2: error: expected ';' before 'vector'
+  vector<int> v;
+  ^
+in.cpp:7:14: error: 'v' was not declared in this scope
+ for(auto x : v)
+              ^
