@@ -12,6 +12,5 @@ def basicImage():
         dockerFile = open('dfile/Dockerfile', 'w', encoding = 'utf-8')     # Getting the content of Required Dockerfile
         dockerFile.write(dockerFileText)
         dockerFile.close()
-        print('yo')
         client.images.build(path="dfile", tag = tagName)
-        print('yo2')
+        
