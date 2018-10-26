@@ -74,7 +74,7 @@ class Ui_MainWindow(object):
         self.formLayout.setWidget(6, QtGui.QFormLayout.FieldRole, self.codeTB)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 651, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 651, 23))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -86,12 +86,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
-        self.languageCombo.setItemText(0, _translate("MainWindow", "C/C++", None))
+        self.languageCombo.setItemText(0, _translate("MainWindow", "C++", None))
         self.languageCombo.setItemText(1, _translate("MainWindow", "Python", None))
         self.label_4.setText(_translate("MainWindow", "Select Language", None))
         self.label_3.setText(_translate("MainWindow", "Logs", None))
         self.label_5.setText(_translate("MainWindow", "Which Version?", None))
-        self.compileB.setText(_translate("MainWindow", "Compiles", None))
+        self.compileB.setText(_translate("MainWindow", "Compile", None))
         self.statB.setText(_translate("MainWindow", "Static Analysis", None))
         self.label.setText(_translate("MainWindow", "Code", None))
         self.openB.setText(_translate("MainWindow", "Open File", None))
