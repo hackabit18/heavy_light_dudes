@@ -2,6 +2,12 @@ from PyQt4 import QtGui
 import sys
 import design
 import os
+import docker 
+import compilers
+from buildImage import basicImage
+
+client = docker.from_env()
+
 class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def __init__(self, parent=None):
         super(CTP, self).__init__(parent)
@@ -27,9 +33,13 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
 
 
 def main():
+
+    basicImage()                      # function to create required images on user's system
+
     app = QtGui.QApplication(sys.argv)
     form = CTP()
     form.show()
+
     # Init code to be added here:
     app.exec_()
 
