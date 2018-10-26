@@ -7,8 +7,10 @@ def basicImage():
     for id in range(1, len(compilers.compilers)+1):
         
         tagName = "ctp" + str(id)
-        dockerFileText = compilers.compilers["1"]
+        print(tagName)
+        dockerFileText = compilers.compilers[str(id)]
         dockerFile = open('dfile/Dockerfile', 'w', encoding = 'utf-8')     # Getting the content of Required Dockerfile
         dockerFile.write(dockerFileText)
         dockerFile.close()
         client.images.build(path="dfile", tag = tagName)
+        
