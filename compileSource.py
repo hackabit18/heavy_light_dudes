@@ -1,6 +1,6 @@
 import os
 import docker
-def writeLogsFile(containerObj): # To write container logs to out.txt
+def writeLogsFile(containerObj): # To write container logs to out.txt, remove should be false if you are using this function
 	Out = containerObj.logs(stdout=True,stderr=False).decode('ASCII')
 	Error = containerObj.logs(stdout=False,stderr=True).decode('ASCII')
 	OutFile = open('tmp/out.txt', 'w', encoding = 'utf-8')
