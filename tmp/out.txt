@@ -1,4 +1,11 @@
-HelloWorld.java:5: error: ';' expected
-        System.out.println("Hello, World")
-                                          ^
-1 error
+in.cpp: In function 'int main()':
+in.cpp:7:10: error: 'x' does not name a type
+ for(auto x : v)
+          ^
+in.cpp:9:2: error: expected ';' before 'return'
+  return 0;
+  ^
+in.cpp:9:2: error: expected primary-expression before 'return'
+in.cpp:9:2: error: expected ';' before 'return'
+in.cpp:9:2: error: expected primary-expression before 'return'
+in.cpp:9:2: error: expected ')' before 'return'

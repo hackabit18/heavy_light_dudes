@@ -1,8 +1,8 @@
 import os
 import docker
 def writeStaticFile(containerObj):
-	statOut = str(containerObj.logs(stdout=True,stderr=False)).strip('b\'\\n')
-	statError = str(containerObj.logs(stdout=False,stderr=True)).strip('b"\\n\'')
+	statOut = containerObj.logs(stdout=True,stderr=False).decode('ASCII')
+	statError = str(containerObj.logs(stdout=False,stderr=True)).decode('ASCII')
 	statOutFile = open('tmp/staticOutput.txt', 'w', encoding = 'utf-8') #StaticTesting Output File
 	statOutFile.write(statOut+'\n'+statError)
 	statOutFile.close()
