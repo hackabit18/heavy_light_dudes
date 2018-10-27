@@ -10,12 +10,13 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def __init__(self, parent=None):
         super(CTP, self).__init__(parent)
         self.setupUi(self)
-        self.items = {'C++':['98','03','11','14','17']} # Mapping for listing versions
+        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3']} # Mapping for listing versions
         self.openB.clicked.connect(self.browse_folder)  # When the button is pressed
                                                         # Execute browse_folder function
         self.listWidget.itemActivated.connect(self.selectFile) #browse and select file
         self.languageCombo.activated[str].connect(self.onComboActivated)
         self.compileB.clicked.connect(self.compileSrc)  # Todo
+
     def browse_folder(self):
         self.listWidget.clear() # In case there are any existing elements in the list
         self.directory = QtGui.QFileDialog.getExistingDirectory(self,"Pick a folder")
@@ -45,11 +46,9 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
             compileSource.compileSrcCpp(versn, self.codeTB.toPlainText())
             self.logTB.clear()
             srcPath = os.getcwd() + '/tmp/out.txt'
-            print(srcPath)
             
             time.sleep(3)
             file = open(srcPath ,'r', encoding = 'utf-8')
-            file.seek(0)
             logs = file.read()
             print(logs)
             file.close()
@@ -57,6 +56,9 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
                 self.logTB.insertPlainText("Compiled Successfully")
             else:
                 self.logTB.insertPlainText(logs)
+        
+        elif lang == 'Python':
+            pass
 
 
 
