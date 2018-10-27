@@ -1,0 +1,4 @@
+HelloWorld.java:5: error: ';' expected
+        System.out.println("Hello, World")
+                                          ^
+1 error

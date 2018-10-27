@@ -11,7 +11,7 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def __init__(self, parent=None):
         super(CTP, self).__init__(parent)
         self.setupUi(self)
-        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3']} # Mapping for listing versions
+        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3'], 'Java':['7', '8', '9']} # Mapping for listing versions
         self.openB.clicked.connect(self.browse_folder)  # When the button is pressed
                                                         # Execute browse_folder function
         self.listWidget.itemActivated.connect(self.selectFile) #browse and select file
@@ -31,7 +31,8 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     
     def selectFile(self, listItem):
         self.codeTB.clear()
-        srcPath = self.directory + '/' + listItem.text()
+        self.fileName = listItem.text()
+        srcPath = self.directory + '/' + self.fileName
         srcFile = open(srcPath, 'r', encoding = 'utf-8')
         srcCode = srcFile.read()
         srcFile.close()
@@ -46,18 +47,22 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
         versn = str(self.versionCombo.currentText())
         if lang == 'C++':
             compileSource.compileSrcCpp(versn, self.codeTB.toPlainText())
-            srcPath = os.getcwd() + '/tmp/out.txt'            
-            file = open(srcPath ,'r', encoding = 'utf-8')
-            logs = file.read()
-            file.close()
-            self.logTB.clear()
-            if logs == "" :
-                self.logTB.insertPlainText("Compiled Successfully")
-            else:
-                self.logTB.insertPlainText(logs)
-        
         elif lang == 'Python':
             pass
+        elif lang == 'Java':
+        	compileSource.compileSrcJava(versn, self.codeTB.toPlainText(), self.fileName)
+
+        srcPath = os.getcwd() + '/tmp/out.txt'            
+        file = open(srcPath ,'r', encoding = 'utf-8')
+        logs = file.read()
+        file.close()
+        self.logTB.clear()
+        if logs == "" :
+            self.logTB.insertPlainText("Compiled Successfully")
+        else:
+            self.logTB.insertPlainText(logs)
+
+
     def staticAnalyse(self):
         lang = str(self.languageCombo.currentText())
         if lang == 'C++' :

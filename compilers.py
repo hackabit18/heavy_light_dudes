@@ -15,5 +15,8 @@ CMD ["/bin/bash"]
 	""",
 	"3": """
 FROM neszt/cppcheck-docker
-	"""
+	""",
+"4": """
+FROM openjdk:7-alpine
+"""
 }

@@ -1,3 +1,2 @@
 
-FROM neszt/cppcheck-docker
-	
+FROM openjdk:7-alpine
