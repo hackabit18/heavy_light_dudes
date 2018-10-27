@@ -8,4 +8,5 @@ def compileSrcCpp(versn, fileString):
 	client = docker.from_env()
 	containerObj = client.containers.run(image="ctp1", command=["/bin/bash", "-c", "cd /tmp; g++ -std=c++{} in.cpp 2> out.txt".format(versn)],
 	 				volumes={srcPath:{'bind': '/tmp', 'mode':'rw'}}, detach = True, remove=True)
-	
+	containerObj.wait() # Wait till the container exits
+

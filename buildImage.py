@@ -12,4 +12,5 @@ def basicImage():
         dockerFile.write(dockerFileText)
         dockerFile.close()
         client.images.build(path="dfile", tag = tagName)
+    
         

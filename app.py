@@ -4,6 +4,7 @@ import design
 import os
 from buildImage import basicImage
 import compileSource
+import staticTesting
 import time
 
 class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
@@ -15,7 +16,8 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
                                                         # Execute browse_folder function
         self.listWidget.itemActivated.connect(self.selectFile) #browse and select file
         self.languageCombo.activated[str].connect(self.onComboActivated)
-        self.compileB.clicked.connect(self.compileSrc)  # Todo
+        self.compileB.clicked.connect(self.compileSrc)  # Compile Button
+        self.statB.clicked.connect(self.staticAnalyse)  # Static Button
 
     def browse_folder(self):
         self.listWidget.clear() # In case there are any existing elements in the list
@@ -44,14 +46,11 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
         versn = str(self.versionCombo.currentText())
         if lang == 'C++':
             compileSource.compileSrcCpp(versn, self.codeTB.toPlainText())
-            self.logTB.clear()
-            srcPath = os.getcwd() + '/tmp/out.txt'
-            
-            time.sleep(3)
+            srcPath = os.getcwd() + '/tmp/out.txt'            
             file = open(srcPath ,'r', encoding = 'utf-8')
             logs = file.read()
-            print(logs)
             file.close()
+            self.logTB.clear()
             if logs == "" :
                 self.logTB.insertPlainText("Compiled Successfully")
             else:
@@ -59,6 +58,17 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
         
         elif lang == 'Python':
             pass
+    def staticAnalyse(self):
+        lang = str(self.languageCombo.currentText())
+        if lang == 'C++' :
+            staticTesting.staticTestCpp(self.codeTB.toPlainText())
+            srcPath = os.getcwd() + '/tmp/staticOutput.txt'
+            file = open(srcPath, 'r', encoding = 'utf-8')
+            logs = file.read()
+            file.close()
+            self.logTB.clear()
+            self.logTB.insertPlainText(logs)              
+
 
 
 
