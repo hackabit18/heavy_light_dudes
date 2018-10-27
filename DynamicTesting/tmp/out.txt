@@ -1,0 +1,16 @@
+
+
+  Calculator unit tests
+    ✓ happy case add
+    ✓ happy case sub
+    ✓ happy case multiply
+    ✓ happy case divide
+    ✓ missing parameter 'first'
+    ✓ missing parameter 'second'
+    ✓ wrong parameter 'first'
+    ✓ wrong parameter 'second'
+    ✓ dividing by zero'
+
+
+  9 passing (60ms)
+
