@@ -1,10 +1,11 @@
-import os
+#include<bits/stdc++.h>
 
-def main():
+using namespace std;
 
-    a = 5
-    b = 6
-    print(a+b)
+int main() {
 
-
-if __name__=="__main__":main()
+    int a=3, b= 4;
+    int c = a + b;
+    cout<<c<<"\n";
+    return 0;
+}
