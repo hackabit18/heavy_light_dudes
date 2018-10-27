@@ -1,10 +1,9 @@
-#include<bits/stdc++.h>
+#include<iostream>
+
 using namespace std;
-int main(){
-	int a[10];
-	a[10] = 0
-	vector<int> v;
-for(auto x : v)
-cout << x<<"\n";
+
+int main() {
+	int arr[10];
+	arr[10] = 4;
 	return 0;
 }

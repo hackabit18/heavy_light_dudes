@@ -4,6 +4,7 @@ import design
 import os
 from buildImage import basicImage
 import compileSource
+import time
 
 class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def __init__(self, parent=None):
@@ -44,7 +45,11 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
             compileSource.compileSrcCpp(versn, self.codeTB.toPlainText())
             self.logTB.clear()
             srcPath = os.getcwd() + '/tmp/out.txt'
+            print(srcPath)
+            
+            time.sleep(3)
             file = open(srcPath ,'r', encoding = 'utf-8')
+            file.seek(0)
             logs = file.read()
             print(logs)
             file.close()
