@@ -30,6 +30,13 @@ We present a GUI which works as a black box and can be used to import projects a
   7. Click on `compile` or `Static Analysis` for running the tests.
   
 ## Brief Description
+While developing an application, most of the time is spent on testing and debugging. Our hack aims to make this process of testing and debugging less frustating and much faster. We'll be providing you with the appropriate development environments which are not directly installed on your host machine, and will not interfere with the dependencies already installed on your machine. Instead, these platforms will be setup in containers! Using this methodology we're able to perform static and dynamic testing on various projects.
+
+### Features
+* Does not pollute or interfere with the local environment.
+* [TODO]
+
+### Future Scope
 [TODO]
 
 ## Copyright Information
