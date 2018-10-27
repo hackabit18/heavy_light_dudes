@@ -61,13 +61,16 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def staticAnalyse(self):
         lang = str(self.languageCombo.currentText())
         if lang == 'C++' :
-            staticTesting.staticTestCpp(self.codeTB.toPlainText())
-            srcPath = os.getcwd() + '/tmp/staticOutput.txt'
-            file = open(srcPath, 'r', encoding = 'utf-8')
-            logs = file.read()
-            file.close()
-            self.logTB.clear()
-            self.logTB.insertPlainText(logs)              
+            staticTesting.staticTestCpp(self.codeTB.toPlainText())        
+        if lang == 'Python':
+            staticTesting.staticTestPy(self.codeTB.toPlainText())
+        srcPath = os.getcwd() + '/tmp/staticOutput.txt'
+        file = open(srcPath, 'r', encoding = 'utf-8')
+        logs = file.read()
+        file.close()
+        self.logTB.clear()
+        self.logTB.insertPlainText(logs)
+
 
 
 
