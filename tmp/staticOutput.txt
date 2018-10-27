@@ -1,85 +1,23 @@
 ************* Module in
-C: 14, 0: Line too long (145/100) (line-too-long)
-C: 14, 0: Exactly one space required after comma
-        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3'], 'Java':['7', '8', '9']} # Mapping for listing versions
-                                 ^ (bad-whitespace)
-C: 14, 0: Exactly one space required after comma
-        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3'], 'Java':['7', '8', '9']} # Mapping for listing versions
-                                      ^ (bad-whitespace)
-C: 14, 0: Exactly one space required after comma
-        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3'], 'Java':['7', '8', '9']} # Mapping for listing versions
-                                           ^ (bad-whitespace)
-C: 14, 0: Exactly one space required after comma
-        self.items = {'C++':['98','03','11','14','17'], 'Python':['Python-2', 'Python-3'], 'Java':['7', '8', '9']} # Mapping for listing versions
-                                                ^ (bad-whitespace)
-C: 24, 0: Exactly one space required after comma
-        self.directory = QtGui.QFileDialog.getExistingDirectory(self,"Pick a folder")
-                                                                    ^ (bad-whitespace)
-C: 31, 0: Trailing whitespace (trailing-whitespace)
-C: 36, 0: No space allowed around keyword argument assignment
-        srcFile = open(srcPath, 'r', encoding = 'utf-8')
-                                              ^ (bad-whitespace)
-C: 40, 0: Trailing whitespace (trailing-whitespace)
-C: 44, 0: Trailing whitespace (trailing-whitespace)
-W: 53, 0: Found indentation with tabs instead of spaces (mixed-indentation)
-C: 55, 0: Trailing whitespace (trailing-whitespace)
-C: 56, 0: No space allowed before comma
-        file = open(srcPath ,'r', encoding = 'utf-8')
-                            ^ (bad-whitespace)
-C: 56, 0: Exactly one space required after comma
-        file = open(srcPath ,'r', encoding = 'utf-8')
-                            ^ (bad-whitespace)
-C: 56, 0: No space allowed around keyword argument assignment
-        file = open(srcPath ,'r', encoding = 'utf-8')
-                                           ^ (bad-whitespace)
-C: 60, 0: No space allowed before :
-        if logs == "" :
-                      ^ (bad-whitespace)
-C: 68, 0: No space allowed before :
-        if lang == 'C++' :
-                         ^ (bad-whitespace)
-C: 69, 0: Trailing whitespace (trailing-whitespace)
-C: 73, 0: No space allowed around keyword argument assignment
-        file = open(srcPath, 'r', encoding = 'utf-8')
-                                           ^ (bad-whitespace)
-C: 99, 0: Final newline missing (missing-final-newline)
+C:  7, 0: Unnecessary parens after 'print' keyword (superfluous-parens)
+C: 10, 0: Final newline missing (missing-final-newline)
+C: 10, 0: Exactly one space required around comparison
+if __name__=="__main__":main()
+           ^^ (bad-whitespace)
+C: 10, 0: Exactly one space required after :
+if __name__=="__main__":main()
+                       ^ (bad-whitespace)
 C:  1, 0: Missing module docstring (missing-docstring)
-E:  1, 0: Unable to import 'PyQt4' (import-error)
-E:  3, 0: Unable to import 'design' (import-error)
-E:  5, 0: Unable to import 'buildImage' (import-error)
-E:  6, 0: Unable to import 'compileSource' (import-error)
-E:  7, 0: Unable to import 'staticTesting' (import-error)
-C: 34, 8: Invalid attribute name "fileName" (invalid-name)
-C: 10, 0: Missing class docstring (missing-docstring)
-C: 22, 4: Missing method docstring (missing-docstring)
-C: 32, 4: Invalid method name "selectFile" (invalid-name)
-C: 32, 4: Invalid argument name "listItem" (invalid-name)
-C: 32, 4: Missing method docstring (missing-docstring)
-C: 35, 8: Invalid variable name "srcPath" (invalid-name)
-C: 36, 8: Invalid variable name "srcFile" (invalid-name)
-C: 37, 8: Invalid variable name "srcCode" (invalid-name)
-C: 41, 4: Invalid method name "onComboActivated" (invalid-name)
-C: 41, 4: Missing method docstring (missing-docstring)
-W: 56, 8: Redefining built-in 'file' (redefined-builtin)
-C: 45, 4: Invalid method name "compileSrc" (invalid-name)
-C: 45, 4: Missing method docstring (missing-docstring)
-C: 55, 8: Invalid variable name "srcPath" (invalid-name)
-W: 73, 8: Redefining built-in 'file' (redefined-builtin)
-C: 66, 4: Invalid method name "staticAnalyse" (invalid-name)
-C: 66, 4: Missing method docstring (missing-docstring)
-C: 72, 8: Invalid variable name "srcPath" (invalid-name)
-W: 24, 8: Attribute 'directory' defined outside __init__ (attribute-defined-outside-init)
-W: 34, 8: Attribute 'fileName' defined outside __init__ (attribute-defined-outside-init)
-C: 85, 0: Missing function docstring (missing-docstring)
-W:  8, 0: Unused import time (unused-import)
-C:  2, 0: standard import "import sys" comes before "from PyQt4 import QtGui" (wrong-import-order)
-C:  4, 0: standard import "import os" comes before "from PyQt4 import QtGui" (wrong-import-order)
-C:  8, 0: standard import "import time" comes before "from PyQt4 import QtGui" (wrong-import-order)
+C:  3, 0: Missing function docstring (missing-docstring)
+C:  5, 4: Invalid variable name "a" (invalid-name)
+C:  6, 4: Invalid variable name "b" (invalid-name)
+C: 10,24: More than one statement on a single line (multiple-statements)
+W:  1, 0: Unused import os (unused-import)
 
 
 Report
 ======
-72 statements analysed.
+7 statements analysed.
 
 Statistics by type
 ------------------
@@ -89,9 +27,9 @@ Statistics by type
 +=========+=======+===========+===========+============+=========+
 |module   |1      |NC         |NC         |0.00        |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
-|class    |1      |NC         |NC         |0.00        |0.00     |
+|class    |0      |NC         |NC         |0           |0        |
 +---------+-------+-----------+-----------+------------+---------+
-|method   |6      |NC         |NC         |16.67       |66.67    |
+|method   |0      |NC         |NC         |0           |0        |
 +---------+-------+-----------+-----------+------------+---------+
 |function |1      |NC         |NC         |0.00        |0.00     |
 +---------+-------+-----------+-----------+------------+---------+
@@ -104,13 +42,13 @@ Raw metrics
 +----------+-------+------+---------+-----------+
 |type      |number |%     |previous |difference |
 +==========+=======+======+=========+===========+
-|code      |74     |74.00 |NC       |NC         |
+|code      |6      |54.55 |NC       |NC         |
 +----------+-------+------+---------+-----------+
 |docstring |0      |0.00  |NC       |NC         |
 +----------+-------+------+---------+-----------+
-|comment   |5      |5.00  |NC       |NC         |
+|comment   |0      |0.00  |NC       |NC         |
 +----------+-------+------+---------+-----------+
-|empty     |21     |21.00 |NC       |NC         |
+|empty     |5      |45.45 |NC       |NC         |
 +----------+-------+------+---------+-----------+
 
 
@@ -134,13 +72,13 @@ Messages by category
 +-----------+-------+---------+-----------+
 |type       |number |previous |difference |
 +===========+=======+=========+===========+
-|convention |41     |NC       |NC         |
+|convention |9      |NC       |NC         |
 +-----------+-------+---------+-----------+
 |refactor   |0      |NC       |NC         |
 +-----------+-------+---------+-----------+
-|warning    |6      |NC       |NC         |
+|warning    |1      |NC       |NC         |
 +-----------+-------+---------+-----------+
-|error      |5      |NC       |NC         |
+|error      |0      |NC       |NC         |
 +-----------+-------+---------+-----------+
 
 
@@ -148,37 +86,27 @@ Messages by category
 Messages
 --------
 
-+-------------------------------+------------+
-|message id                     |occurrences |
-+===============================+============+
-|bad-whitespace                 |12          |
-+-------------------------------+------------+
-|invalid-name                   |11          |
-+-------------------------------+------------+
-|missing-docstring              |8           |
-+-------------------------------+------------+
-|trailing-whitespace            |5           |
-+-------------------------------+------------+
-|import-error                   |5           |
-+-------------------------------+------------+
-|wrong-import-order             |3           |
-+-------------------------------+------------+
-|redefined-builtin              |2           |
-+-------------------------------+------------+
-|attribute-defined-outside-init |2           |
-+-------------------------------+------------+
-|unused-import                  |1           |
-+-------------------------------+------------+
-|mixed-indentation              |1           |
-+-------------------------------+------------+
-|missing-final-newline          |1           |
-+-------------------------------+------------+
-|line-too-long                  |1           |
-+-------------------------------+------------+
++----------------------+------------+
+|message id            |occurrences |
++======================+============+
+|missing-docstring     |2           |
++----------------------+------------+
+|invalid-name          |2           |
++----------------------+------------+
+|bad-whitespace        |2           |
++----------------------+------------+
+|unused-import         |1           |
++----------------------+------------+
+|superfluous-parens    |1           |
++----------------------+------------+
+|multiple-statements   |1           |
++----------------------+------------+
+|missing-final-newline |1           |
++----------------------+------------+
 
 
 
 Global evaluation
 -----------------
-Your code has been rated at 0.00/10
+Your code has been rated at -4.29/10
 

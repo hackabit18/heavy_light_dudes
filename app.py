@@ -6,7 +6,7 @@ from buildImage import basicImage
 import compileSource
 import staticTesting
 import time
-
+import shutil
 class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
     def __init__(self, parent=None):
         super(CTP, self).__init__(parent)
@@ -89,7 +89,9 @@ def main():
     app = QtGui.QApplication(sys.argv)
     form = CTP()
     form.show()
-
+    path = "tmp"
+    shutil.rmtree(path, ignore_errors = True)
+    os.makedirs(path)
     # Init code to be added here:
     # Make Images
     app.exec_()

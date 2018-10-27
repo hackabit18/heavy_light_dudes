@@ -1,10 +1,10 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main(){
-	int a[10];
-	a[10] = 0;
-	vector<int> v;
-for(auto x : v)
-cout << x<<"\n";
-	return 0;
-}
+import os
+
+def main():
+
+    a = 5
+    b = 6
+    print(a+b)
+
+
+if __name__=="__main__":main()
