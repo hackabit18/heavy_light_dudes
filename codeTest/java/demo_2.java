@@ -1,5 +1,15 @@
 import java.util.*;
 
+interface FuncInterface 
+{ 
+    void abstractFun(int x); 
+  
+    default void normalFun() 
+    { 
+       System.out.println("Hello"); 
+    } 
+} 
+
 class test{
 
     public static void main(String args[]) {
