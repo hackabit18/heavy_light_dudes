@@ -18,5 +18,8 @@ FROM neszt/cppcheck-docker
 	""",
 "4": """
 FROM openjdk:7-alpine
+""",
+"5": """
+FROM openjdk:8-alpine
 """
 }

@@ -24,7 +24,13 @@ def compileSrcJava(versn, fileString, fileName):
 		file.write(fileString)
 		file.close()
 		client = docker.from_env()
-		containerObj = client.containers.run(image="ctp4", working_dir = '/tmp', command=["javac", "{}".format(fileName)],
+		img = "ctp"
+		if versn == "7":
+			img = img + "4"
+		else:
+			img = img + "5"
+
+		containerObj = client.containers.run(image=img, working_dir = '/tmp', command=["javac", "{}".format(fileName)],
 	 				volumes={srcPath:{'bind': '/tmp', 'mode':'rw'}}, detach = True)
 		containerObj.wait()
 		writeLogsFile(containerObj)

@@ -1,2 +1,2 @@
 
-FROM openjdk:7-alpine
+FROM openjdk:8-alpine
