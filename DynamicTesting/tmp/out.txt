@@ -1,7 +1,7 @@
 
 
   Calculator unit tests
-    ✓ happy case add
+    ✓ Add Test Case
     ✓ Sub Test Case
     ✓ Multiply Test Case
     ✓ Divide Test Case

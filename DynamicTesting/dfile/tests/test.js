@@ -3,7 +3,7 @@ var request = require('supertest');
 var app = require('../app').app;
 
 describe('Calculator unit tests', function(){
-    it("happy case add", function(done){
+    it("Add Test Case", function(done){
         request(app)
             .get("/calculator/add?first=1.2&second=3.4")
             .set('Accept', 'application/json')

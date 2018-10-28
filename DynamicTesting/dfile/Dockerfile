@@ -1,10 +1,14 @@
 
-FROM project
+FROM node:7
+ARG VERSION=1.0.0
 
-COPY tests tests
+WORKDIR /usr/src/app
+COPY /node/package.json /node/app.js node/LICENSE /usr/src/app/
+COPY /node/lib /usr/src/app/lib/
+LABEL license=MIT       version=$VERSION
 
-ENV NODE_ENV dev
+ENV NODE_ENV production
 
-RUN npm update &&     npm install -g mocha
+RUN npm update
 
-CMD ["mocha", "tests/test.js", "--reporter", "spec"]
+CMD ["node", "app.js"]

@@ -1,0 +1,4 @@
+Checking /src/in.cpp ...
+
+[/src/in.cpp:8]: (error) Array 'a[10]' accessed at index 10, which is out of bounds.
+[/src/in.cpp:9]: (error) Division by zero.
