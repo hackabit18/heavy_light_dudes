@@ -10,7 +10,7 @@ We present a GUI which works as a black box and can be used to import projects a
 
 ## Technologies used
 
-* Docker module to create and setup environment.
+* Docker to create and setup environment.
 * PYQt for the GUI application.
 * Python3.
 * BASH
@@ -44,12 +44,19 @@ We present a GUI which works as a black box and can be used to import projects a
   4. Click on `Browse Tests` button to select the tests to be run for the projects.
   5. Click on `Run Tests` to begin the testing process.
   6. Wait for some time, the appropriate Output of your program will get displayed on `Logs` window. 
-  
+
+## Output
+**Static Testing Example**
+![StaticExample](screenshots/staticExample.png)
+
+**Dynamic Testing Example**
+![DynamicExample](screenshots/dynamicExample.png)   
+
 ## Brief Description
 While developing and coding an application, most of the time is spent on testing and debugging the app. with our platform, we aim to make this process of testing and debugging less frustating and much faster. We'll be providing you with the appropriate development environments which are not directly installed on your host machine, and will not break the dependencies of your previous projects that are already installed on your machine. Instead, these environments will be setup in containers! Using this methodology we're able to perform static and dynamic testing on various projects at a faster rate.
 
 ### Features
-* Does not pollute or interfere the local environment of your system for running different projects.
+* Does not pollute or interfere with the local environment of your system for running different projects.
 * **Single Click Feature** to run all your Static and Dynamic tests.
 * **Log window** to display the test results.
 * Ease to define new environments for your projects.
