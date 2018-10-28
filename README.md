@@ -47,9 +47,11 @@ We present a GUI which works as a black box and can be used to import projects a
 
 ## Output
 **Static Testing Example**
+
 ![StaticExample](screenshots/staticExample.png)
 
 **Dynamic Testing Example**
+
 ![DynamicExample](screenshots/dynamicExample.png)   
 
 ## Brief Description
