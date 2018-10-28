@@ -17,7 +17,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("happy case sub", function(done){
+    it("Sub Test Case", function(done){
         request(app)
             .get("/calculator/sub?first=1.2&second=3.4")
             .set('Accept', 'application/json')
@@ -31,7 +31,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("happy case multiply", function(done){
+    it("Multiply Test Case", function(done){
         request(app)
             .get("/calculator/mul?first=1.2&second=3.4")
             .set('Accept', 'application/json')
@@ -45,7 +45,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("happy case divide", function(done){
+    it("Divide Test Case", function(done){
         request(app)
             .get("/calculator/div?first=1.2&second=3.4")
             .set('Accept', 'application/json')
@@ -59,7 +59,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("missing parameter 'first'", function (done) {
+    it("Missing Parameter 'first'", function (done) {
         request(app)
             .get("/calculator/add?second=3.4")
             .expect('Content-Type', /text/)
@@ -72,7 +72,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("missing parameter 'second'", function (done) {
+    it("Missing Parameter 'second'", function (done) {
         request(app)
             .get("/calculator/add?first=1.2")
             .expect('Content-Type', /text/)
@@ -85,7 +85,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("wrong parameter 'first'", function (done) {
+    it("Wrong Parameter 'first'", function (done) {
         request(app)
             .get("/calculator/add?first=hello&second=3.4")
             .expect('Content-Type', /text/)
@@ -98,7 +98,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("wrong parameter 'second'", function (done) {
+    it("Wrong Parameter 'second'", function (done) {
         request(app)
             .get("/calculator/add?first=1.2&second=world")
             .expect('Content-Type', /text/)
@@ -111,7 +111,7 @@ describe('Calculator unit tests', function(){
             })
     });
 
-    it("dividing by zero'", function (done) {
+    it("Dividing by Zero'", function (done) {
         request(app)
             .get("/calculator/div?first=1.2&second=0")
             .expect('Content-Type', /text/)

@@ -42,6 +42,7 @@ class CTP(QtGui.QMainWindow, design.Ui_MainWindow):
 
     def runTests(self):
     	### to Do
+        print('Running Tests')
         basicImage()                      # function to create required images on user's system
         logs = compileSource.compileSrc()
         self.logTB.clear()
